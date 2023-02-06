@@ -36,7 +36,7 @@ public class GenericResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String guardar(String jsonData) throws IOException {
         
-        System.out.println("INICIO SERVICIO");
+        System.out.println("INICIO SERVICIO DESCARGA");
         
         JsonParser objJ = new JsonParser();
         JsonObject jDatos = (JsonObject) objJ.parse(jsonData);

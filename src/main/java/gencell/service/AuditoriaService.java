@@ -88,10 +88,10 @@ public class AuditoriaService {
     public Integer  ejecutarDescargaSFTP() throws IOException {
        
         Integer archivos = 0;
-        List<VWReporteExamenesGeneticaGP> listaResultadosGP = sessionBeanBaseFachada.BuscarTodos(VWReporteExamenesGeneticaGP.class); // se consulta la vista 
-        //VWReporteExamenesGeneticaGP archivo = sessionBeanBaseFachada.consultaResultadosLimit();
-        //List<VWReporteExamenesGeneticaGP> listaResultadosGP  = new ArrayList<>();
-        //listaResultadosGP.add(archivo);
+        //List<VWReporteExamenesGeneticaGP> listaResultadosGP = sessionBeanBaseFachada.BuscarTodos(VWReporteExamenesGeneticaGP.class); // se consulta la vista 
+        VWReporteExamenesGeneticaGP archivo = sessionBeanBaseFachada.consultaResultadosLimit();
+        List<VWReporteExamenesGeneticaGP> listaResultadosGP  = new ArrayList<>();
+        listaResultadosGP.add(archivo);
         for (VWReporteExamenesGeneticaGP lista : listaResultadosGP) {
 
             //String url = lista.getUrlResultado().substring(15, lista.getUrlResultado().length());
@@ -107,7 +107,7 @@ public class AuditoriaService {
     public void descargarUrl(String url, String nombreArchivo) throws MalformedURLException, IOException {
 
         try {
-        File pegar = new File("D:" + File.separator + "ResultadosSFTP3" + File.separator + nombreArchivo);
+        File pegar = new File("D:" + File.separator + "ResultadosSFTP4" + File.separator + nombreArchivo);
         URLConnection conn = new URL(url).openConnection();
         conn.connect();
         InputStream in = conn.getInputStream();
