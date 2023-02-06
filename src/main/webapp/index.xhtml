@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html" 
+                xmlns:b="http://bootsfaces.net/ui" 
+                xmlns:p="http://primefaces.org/ui" 
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <ui:define name="content">
+        <b:panel style="width: 100%">
+           
+            <h:form id="formPublicacionResultadoOrden" >   
+                <b:panel id="temporalDescarga">
+                    <h4>Esta funcion es temporal</h4>
+                    <h2>Descarga de Resultados</h2>
+                    
+                   <b:commandButton onclick="ajax:MBDescargaResultados.ejecutarDescargaSFTP()"                                              
+                                             ajax="true" 
+                                             value="DESCARGAR"
+                                             tooltip="Descargar Resultados "
+                                             iconAwesome="fa-search-plus"
+                                             look="warning"
+                                             size="md"                                             
+                                             >
+                  </b:commandButton> 
+                    </b:panel>                                  
+            </h:form>
+        </b:panel>        
+    </ui:define>
+</ui:composition>            
